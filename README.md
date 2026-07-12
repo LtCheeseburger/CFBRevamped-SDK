@@ -4,7 +4,7 @@ The **CFBRevamped SDK** is a modern C++20 and Qt6 software development kit for E
 
 The SDK provides reusable libraries, tools, and editors for working with EA Sports archive formats, user interface assets, textures, rosters, and game resources. It serves as the technical foundation for future CFBRevamped tools including archive editors, league editing, TeamBuilder restoration, and other community projects.
 
-> **Project Status:** Internal Alpha  
+> **Project Status:** Released to public, new incremental features  
 > APIs, file formats, and project structure are actively evolving.
 
 ---
