@@ -1,87 +1,202 @@
-# ASTra
+# CFBRevamped SDK
 
-ASTra is a C++20 + Qt6 modding toolkit focused on EA Sports archive and UI formats used by NCAA Football 14 and related titles.
+The **CFBRevamped SDK** is a modern C++20 and Qt6 software development kit for EA Sports college football titles, with an initial focus on **NCAA Football 14** and the College Football Revamped project.
 
-This repository is the active source tree for the desktop app and supporting libraries. The project is currently in an internal alpha stage, with current work centered on archive browsing/editing, texture workflows, RSF handling, and APT UI tooling.
+The SDK provides reusable libraries, tools, and editors for working with EA Sports archive formats, user interface assets, textures, rosters, and game resources. It serves as the technical foundation for future CFBRevamped tools including archive editors, league editing, TeamBuilder restoration, and other community projects.
 
-## Current focus
+> **Project Status:** Internal Alpha  
+> APIs, file formats, and project structure are actively evolving.
 
-ASTra is being built as a safer, more modern replacement for older game-specific tools. The main goals are:
+---
 
-- inspect and browse AST/BGFA containers
-- safely replace or export supported files
-- work with RSF data and related configs
-- inspect textures and support EA/XPR2 texture workflows
-- parse and edit APT UI data with a visual preview/editor foundation
-- provide both a GUI app and a CLI for batch or validation workflows
+# Goals
 
-## Project layout
+The long-term goal of the CFBRevamped SDK is to become the definitive open development platform for EA Sports college football games.
+
+Current development focuses on:
+
+- AST/BGFA archive browsing and editing
+- Safe archive rebuilding
+- RSF parsing and editing
+- Texture extraction, conversion, and replacement
+- XPR2 texture workflows
+- APT UI parsing and visual inspection
+- XML generation and editing
+- Command-line tooling for automation
+- Qt-based desktop tooling
+
+Future goals include:
+
+- League Editor
+- TeamBuilder restoration tools
+- Dynasty database editing
+- Stadium editing
+- Uniform editing
+- Mod packaging
+- Cross-title SDK support (NCAA, Madden, etc.)
+
+---
+
+# Roadmap
+
+## Phase 1 — SDK Foundation *(Current)*
+
+- Core archive library
+- AST/BGFA support
+- Safe write pipeline
+- RSF support
+- Texture library
+- APT parser
+- XML serialization
+- CLI utilities
+- Qt desktop application
+- Unit testing and validation
+
+---
+
+## Phase 2 — Asset Editing
+
+- Texture replacement
+- Archive rebuilding
+- APT visual editor
+- Preview rendering
+- Resource dependency viewer
+- Batch processing tools
+
+---
+
+## Phase 3 — League Editor
+
+A complete editor for NCAA Football 14 featuring:
+
+- Teams
+- Conferences
+- Schedules
+- Rosters
+- Dynasty databases
+- Bowl configuration
+- Playoff support
+- Season customization
+
+---
+
+## Phase 4 — TeamBuilder
+
+Modern replacement for EA's discontinued TeamBuilder.
+
+Planned capabilities include:
+
+- Uniform editor
+- Field editor
+- Logo management
+- Team branding
+- Stadium assignment
+- Package import/export
+
+---
+
+## Phase 5 — Expanded SDK
+
+Long-term expansion into additional EA Sports titles, shared SDK libraries, and community modding infrastructure.
+
+Potential support includes:
+
+- Madden
+- NCAA Basketball
+- Tiger Woods PGA Tour
+- Legacy EA Sports archive formats
+
+---
+
+# Project Layout
 
 ```text
-ASTra/
+CFBRevamped-SDK/
 ├─ apps/
-│  ├─ gf_cli/                # command-line entrypoint
-│  └─ gf_toolsuite_gui/      # Qt6 desktop app
+│  ├─ gf_cli/
+│  └─ gf_toolsuite_gui/
+│
 ├─ libs/
-│  ├─ gf_apt/                # APT parsing / XML / preview helpers
-│  ├─ gf_core/               # core utilities, archive logic, safe-write helpers
-│  ├─ gf_models/             # shared models and RSF-related types
-│  ├─ gf_platform_ps3/       # PS3/platform-specific helpers
-│  └─ gf_textures/           # DDS/XPR2 and texture rebuild helpers
+│  ├─ gf_apt/
+│  ├─ gf_core/
+│  ├─ gf_models/
+│  ├─ gf_platform_ps3/
+│  └─ gf_textures/
+│
 ├─ docs/
 │  ├─ architecture/
 │  └─ requirements/
+│
 ├─ tests/
 └─ cmake/
 ```
 
-## Build requirements
+---
 
-Minimum tooling:
+# Build Requirements
+
+Minimum requirements:
 
 - CMake 3.24+
-- a C++20 compiler
-- Ninja or another supported CMake generator
-- Qt 6 Widgets
+- C++20 compiler
+- Qt 6
+- Ninja (recommended)
 - Git
 - zlib
 
-Third-party libraries such as `spdlog`, `nlohmann/json`, and `Catch2` are pulled through CMake `FetchContent`.
+Dependencies including `spdlog`, `nlohmann/json`, and `Catch2` are automatically downloaded using CMake's `FetchContent`.
 
-## Build
+---
 
-### Windows example
+# Building
+
+## Windows
 
 ```powershell
 cmake -S . -B out-win
 cmake --build out-win --target gf_toolsuite_gui -j 8
 ```
 
-### Run
+---
+
+# Running
+
+CLI
 
 ```powershell
 out-win\apps\gf_cli\astra.exe --version
+```
+
+GUI
+
+```powershell
 out-win\apps\gf_toolsuite_gui\gf_toolsuite_gui.exe
 ```
 
-## Notes
+> *(Executable names may change as the project is renamed.)*
 
-- Qt is expected to be installed separately and discoverable by CMake.
-- Generated files are written to the selected build directory.
-- The repository may move quickly while the internal toolset is being cleaned up and prepared for broader releases.
+---
 
-## Documentation
+# Documentation
 
-Additional project notes live here:
+Additional documentation can be found in:
 
-- `docs/requirements/requirements.md`
 - `docs/architecture/architecture.md`
+- `docs/requirements/requirements.md`
 - `docs/detection_rules.md`
 
-## Status
+---
 
-This is not intended to be a polished public release branch yet. It is the live working repository for ASTra as the tool moves toward a more complete 0.8.x/0.9.x feature set.
+# Current Status
 
-## License
+The CFBRevamped SDK is under active development and is not yet considered production ready.
+
+Current work is focused on strengthening the SDK foundation, improving archive support, modernizing the codebase, and building the infrastructure required for future editing tools.
+
+Development is incremental, with stability and correctness taking priority over rapid feature additions.
+
+---
+
+# License
 
 See `LICENSE`.
