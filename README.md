@@ -1,15 +1,9 @@
 <div align="center">
 
-<table>
-  <tr>
-    <td valign="middle">
-      <h1><strong>EMBER</strong></h1>
-    </td>
-    <td valign="middle">
-      <img src="docs/imgs/ember-logo.png" alt="Ember Logo" width="120">
-    </td>
-  </tr>
-</table>
+<img
+  src="docs/imgs/ember-wordmark.png"
+  alt="Ember"
+  width="720">
 
 <h3>A modern asset development SDK for legacy EA Sports titles</h3>
 
