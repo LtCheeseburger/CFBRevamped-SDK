@@ -2,7 +2,7 @@
 
 <!-- Replace the URL below with the GitHub-hosted Ember logo URL. -->
 
-<img src="docs/images/ember-logo.png" alt="Ember Logo" width="180">
+<img src="docs/imgs/ember-logo.png" alt="Ember Logo" width="180">
 
 # Ember
 
