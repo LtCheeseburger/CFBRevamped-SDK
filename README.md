@@ -1,14 +1,18 @@
 <div align="center">
 
-<!-- Replace the URL below with the GitHub-hosted Ember logo URL. -->
+<table>
+  <tr>
+    <td valign="middle">
+      <h1><strong>EMBER</strong></h1>
+    </td>
+    <td valign="middle">
+      <img src="EMBER_LOGO_URL" alt="Ember Logo" width="120">
+    </td>
+  </tr>
+</table>
 
-<img src="docs/imgs/ember-logo.png" alt="Ember Logo" width="180">
-
-# Ember
-
-### A modern asset development SDK for legacy EA Sports titles
-
-**C++20 · Qt 6 · NCAA Football 14 · College Football Revamped**
+<h3>A modern asset development SDK for legacy EA Sports titles</h3>
+<p><strong>C++20 · Qt 6 · NCAA Football 14 · College Football Revamped</strong></p>
 
 </div>
 
