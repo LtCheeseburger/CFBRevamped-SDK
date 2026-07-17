@@ -6,7 +6,7 @@
       <h1><strong>EMBER</strong></h1>
     </td>
     <td valign="middle">
-      <img src="docs/imgs/emeber-logo.png" alt="Ember Logo" width="120">
+      <img src="docs/imgs/ember-logo.png" alt="Ember Logo" width="120">
     </td>
   </tr>
 </table>
