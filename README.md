@@ -1,7 +1,7 @@
 <div align="center">
 
 <img
-  src="docs/imgs/ember-wordmark.png"
+  src="docs/imgs/ember-logo.png"
   alt="Ember"
   width="720">
 
